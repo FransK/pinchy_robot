@@ -1,4 +1,4 @@
-<robot name="r2d2">
+<robot name="pinchy">
 
   <link name="axis">
     <visual>
