@@ -62,4 +62,18 @@
     <child link="lower_arm"/>
     <origin rpy="0 0 0" xyz="0 0.1 0.35"/>
   </joint>
+  <link name="hand">
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.05"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+  </link>
+  <joint name="lower_arm_to_hand" type="continuous">
+    <axis xyz="0 1 0"/>
+    <parent link="lower_arm"/>
+    <child link="hand"/>
+    <origin rpy="0 0 0" xyz="0 0 0.425"/>
+  </joint>
 </robot>
