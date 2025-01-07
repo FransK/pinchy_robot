@@ -1,0 +1,41 @@
+<launch>
+    <arg name="world_sdf_file" default="empty.sdf" />
+    <arg name="world_sdf_string" default="" />
+    <arg name="container_name" default="ros_gz_container" />
+    <arg name="create_own_container" default="False" />
+    <arg name="use_composition" default="False" />
+    <gz_server 
+        world_sdf_file="$(var world_sdf_file)"
+        world_sdf_string="$(var world_sdf_string)"
+        container_name="$(var container_name)"
+        create_own_container="$(var create_own_container)"
+        use_composition="$(var use_composition)">
+    </gz_server>
+
+    <!-- <arg name="world" default="empty" />
+    <arg name="file" default="" />
+    <arg name="model_string" default="" />
+    <arg name="topic" default="${find-pkg-share pinchy_robot}/urdf/pinchy.urdf" />
+    <arg name="entity_name" default="" />
+    <arg name="allow_renaming" default="False" />
+    <arg name="x" default='0.' />
+    <arg name="y" default='0.' />
+    <arg name="z" default='0.' />
+    <arg name="roll" default='0.' />
+    <arg name="pitch" default='0.' />
+    <arg name="yaw" default='0.' />
+    <gz_spawn_model 
+        world="$(var world)"
+        file="$(var file)"
+        model_string="$(var model_string)"
+        topic="$(var topic)"
+        entity_name="$(var entity_name)"
+        allow_renaming="$(var allow_renaming)"
+        x="$(var x)"
+        y="$(var y)"
+        z="$(var z)"
+        roll="$(var roll)"
+        pitch="$(var pitch)"
+        yaw="$(var yaw)">
+    </gz_spawn_model> -->
+</launch>
