@@ -32,4 +32,34 @@
     <child link="torso"/>
     <origin rpy="0 0 0" xyz="0 0 0.05"/>
   </joint>
+  <link name="upper_arm">
+    <visual>
+      <geometry>
+        <cylinder length="0.4" radius="0.05"/>
+      </geometry>
+      <material name="silver"/>
+      <origin xyz="0 0 0.2"/>
+    </visual>
+  </link>
+  <joint name="torso_to_upper_arm" type="continuous">
+    <axis xyz="0 1 0"/>
+    <parent link="torso"/>
+    <child link="upper_arm"/>
+    <origin rpy="0 1.5708 0" xyz="0 -0.1 0.45"/>
+  </joint>
+  <link name="lower_arm">
+    <visual>
+      <geometry>
+        <cylinder length="0.4" radius="0.05"/>
+      </geometry>
+      <material name="silver"/>
+      <origin xyz="0 0 0.2"/>
+    </visual>
+  </link>
+  <joint name="upper_arm_to_lower_arm" type="continuous">
+    <axis xyz="0 1 0"/>
+    <parent link="upper_arm"/>
+    <child link="lower_arm"/>
+    <origin rpy="0 0 0" xyz="0 0.1 0.35"/>
+  </joint>
 </robot>
