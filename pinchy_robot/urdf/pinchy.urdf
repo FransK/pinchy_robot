@@ -1,0 +1,18 @@
+<robot name="pinchy">
+  <link name="world"/>
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <cylinder length="0.05" radius="0.1"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.75 0.75 0.75 1"/>
+      </material>
+      <origin xyz="0 0 0.025"/>
+    </visual>
+  </link>
+  <joint name="world_to_base_link" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+  </joint>
+</robot>
