@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <sdf version='1.11'>
   <model name='pinchy'>
     <joint name='world_to_base_link' type='fixed'>
