@@ -1,35 +1,14 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <material name="silver">
-    <color rgba="0.75 0.75 0.75 1"/>
-  </material>
+  <xacro:macro name="pinchy" params="parent *origin">
 
-  <link name='root'/>
-  <link name='massive_block'>
-    <visual>
-      <geometry>
-        <box size="0.1 0.1 0.0001"/>
-      </geometry>
-      <material name="silver"/>
-    </visual>
-    <collision>
-      <pose>0 0 0 0 0 0</pose>
-      <geometry>
-        <box size="0.1 0.1 0.0001"/>
-      </geometry>
-    </collision>
-    <inertial>
-      <mass value="1000.0"/>
-      <origin xyz="0 0 0"/>
-      <inertia ixx="0" iyy="0" izz="0"
-        ixy="0" ixz="0" iyz="0"/>
-    </inertial>
-  </link>
-  <joint name="root_to_massive_block" type="fixed">
-    <parent link="root"/>
-    <child link="massive_block"/>
+  <joint name="base_joint" type="fixed">
+    <xacro:insert_block name="origin" />
+    <parent link="${parent}"/>
+    <child link="base_link"/>
   </joint>
+
   <link name="base_link">
     <visual>
       <geometry>
@@ -51,10 +30,14 @@
         ixy="0" ixz="0" iyz="0"/>
     </inertial>
   </link>
-  <joint name="massive_block_to_base_link" type="fixed">
-    <parent link="massive_block"/>
-    <child link="base_link"/>
+
+  <joint name="base_link_to_torso" type="continuous">
+    <axis xyz="0 0 1"/>
+    <parent link="base_link"/>
+    <child link="torso"/>
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
   </joint>
+
   <link name="torso">
     <visual>
       <geometry>
@@ -76,12 +59,14 @@
         ixy="0" ixz="0" iyz="0"/>
     </inertial>
   </link>
-  <joint name="base_link_to_torso" type="continuous">
-    <axis xyz="0 0 1"/>
-    <parent link="base_link"/>
-    <child link="torso"/>
-    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+
+  <joint name="torso_to_upper_arm" type="continuous">
+    <axis xyz="0 1 0"/>
+    <parent link="torso"/>
+    <child link="upper_arm"/>
+    <origin rpy="0 1.5708 0" xyz="0 -0.1 0.45"/>
   </joint>
+
   <link name="upper_arm">
     <visual>
       <geometry>
@@ -103,12 +88,14 @@
         ixy="0" ixz="0" iyz="0"/>
     </inertial>
   </link>
-  <joint name="torso_to_upper_arm" type="continuous">
+
+  <joint name="upper_arm_to_lower_arm" type="continuous">
     <axis xyz="0 1 0"/>
-    <parent link="torso"/>
-    <child link="upper_arm"/>
-    <origin rpy="0 1.5708 0" xyz="0 -0.1 0.45"/>
+    <parent link="upper_arm"/>
+    <child link="lower_arm"/>
+    <origin rpy="0 0 0" xyz="0 0.1 0.35"/>
   </joint>
+
   <link name="lower_arm">
     <visual>
       <geometry>
@@ -130,12 +117,14 @@
         ixy="0" ixz="0" iyz="0"/>
     </inertial>
   </link>
-  <joint name="upper_arm_to_lower_arm" type="continuous">
+
+  <joint name="lower_arm_to_hand" type="continuous">
     <axis xyz="0 1 0"/>
-    <parent link="upper_arm"/>
-    <child link="lower_arm"/>
-    <origin rpy="0 0 0" xyz="0 0.1 0.35"/>
+    <parent link="lower_arm"/>
+    <child link="hand"/>
+    <origin rpy="0 0 0" xyz="0 0 0.425"/>
   </joint>
+
   <link name="hand">
     <visual>
       <geometry>
@@ -154,10 +143,7 @@
         ixy="0" ixz="0" iyz="0"/>
     </inertial>
   </link>
-  <joint name="lower_arm_to_hand" type="continuous">
-    <axis xyz="0 1 0"/>
-    <parent link="lower_arm"/>
-    <child link="hand"/>
-    <origin rpy="0 0 0" xyz="0 0 0.425"/>
-  </joint>
+
+  </xacro:macro>
+
 </robot>

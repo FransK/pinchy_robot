@@ -13,9 +13,9 @@
 # limitations under the License.
 
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, RegisterEventHandler
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
 from launch.conditions import IfCondition
-from launch.event_handlers import OnProcessExit
+from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import Command, FindExecutable, LaunchConfiguration, PathJoinSubstitution
 
 from launch_ros.actions import Node
@@ -36,6 +36,28 @@ def generate_launch_description():
 
     # Initialize Arguments
     rviz = LaunchConfiguration("rviz")
+
+    # gazebo
+    gazebo = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            [FindPackageShare("ros_gz_sim"), "/launch/gz_sim.launch.py"]
+        ),
+        launch_arguments={"gz_args": " -r -v 3 empty.sdf"}.items(),
+    )
+
+    gz_spawn_entity = Node(
+        package="ros_gz_sim",
+        executable="create",
+        output="screen",
+        arguments=[
+            "-topic",
+            "/robot_description",
+            "-name",
+            "pinchy_system_position",
+            "-allow_remaining",
+            "true",
+        ]
+    )
 
     # Get URDF via xacro
     robot_description_content = Command(
@@ -65,17 +87,10 @@ def generate_launch_description():
         [FindPackageShare("pinchy_robot_bringup"), "config", "pinchy.rviz"]
     )
 
-    control_node = Node(
-        package="controller_manager",
-        executable="ros2_control_node",
-        parameters=[robot_controllers],
-        output="both",
-    )
-
     robot_state_pub_node = Node(
         package="robot_state_publisher",
         executable="robot_state_publisher",
-        output="both",
+        output="screen",
         parameters=[
             {'use_sim_time': True},
             robot_description,
@@ -83,7 +98,7 @@ def generate_launch_description():
     )
 
     rviz_node = Node(
-        package="rivz2",
+        package="rviz2",
         executable="rviz2",
         name="rviz2",
         output="log",
@@ -103,29 +118,13 @@ def generate_launch_description():
         arguments=["forward_position_controller", "--param-file", robot_controllers],
     )
 
-    # Delay rviz start until after `joint_state_broacaster`
-    delay_rviz_after_joint_state_broadcaster_spawner = RegisterEventHandler(
-        event_handler=OnProcessExit(
-            target_action=joint_state_broadcaster_spawner,
-            on_exit=[rviz_node],
-        )
-    )
-
-    # Delay start of joint_state_broadcaster after `robot_controller`
-    # TODO(anyone): This is a workaround for flaky tests. Remove when fixed.
-    delay_joint_state_broadcaster_after_robot_controller_spawner = RegisterEventHandler(
-        event_handler=OnProcessExit(
-            target_action=robot_controller_spawner,
-            on_exit=[joint_state_broadcaster_spawner],
-        )
-    )
-
     nodes = [
-        control_node,
+        gazebo,
         robot_state_pub_node,
+        gz_spawn_entity,
+        joint_state_broadcaster_spawner,
         robot_controller_spawner,
-        delay_rviz_after_joint_state_broadcaster_spawner,
-        delay_joint_state_broadcaster_after_robot_controller_spawner,
+        rviz_node,
     ]
 
     return LaunchDescription(declared_arguments + nodes)

@@ -8,10 +8,10 @@
   <license>Apache 2.0</license>
   <author>Frans Kouwenhoven</author>
 
-  <depend>pinchy_robot_description</depend>
-
   <buildtool_depend>ament_cmake</buildtool_depend>
 
+  <exec_depend>pinchy_robot_description</exec_depend>
+  
   <test_depend>ament_lint_auto</test_depend>
 
   <export>

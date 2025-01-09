@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <xacro:macro name="pinchy_gazebo">
+
+        <gazebo>
+            <plugin name="gz_ros2_control::GazeboSimROS2ControlPlugin" filename="libgz_ros2_control-system.so">
+                <parameters>$(find pinchy_robot_bringup)/config/pinchy_controllers.yaml</parameters>
+            </plugin>
+        </gazebo>
+
+    </xacro:macro>
+
+</robot>

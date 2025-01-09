@@ -1,0 +1,16 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 10 # Hz
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+forward_position_controller:
+  ros__parameters:
+    type: forward_command_controller/ForwardCommandController
+    joints:
+      - base_link_to_torso
+      - torso_to_upper_arm
+      - upper_arm_to_lower_arm
+      - lower_arm_to_hand
+    interface_name: position
