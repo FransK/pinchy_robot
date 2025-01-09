@@ -3,7 +3,33 @@
     <color rgba="0.75 0.75 0.75 1"/>
   </material>
 
-  <link name="world"/>
+  <link name='root'/>
+  <link name='massive_block'>
+    <visual name='massive_block_visual'>
+      <geometry>
+        <box size="1 1 0.0001"/>
+      </geometry>
+      <material name="invisible">
+        <color rgba="0 0 0 0"/>
+      </material>
+    </visual>
+    <collision name='massive_block_collision'>
+      <pose>0 0 0 0 0 0</pose>
+      <geometry>
+        <box size="1 1 0.0001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1000.0"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0" iyy="0" izz="0"
+        ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <joint name="root_to_massive_block" type="fixed">
+    <parent link="root"/>
+    <child link="massive_block"/>
+  </joint>
   <link name="base_link">
     <visual>
       <geometry>
@@ -25,8 +51,8 @@
         ixy="0" ixz="0" iyz="0"/>
     </inertial>
   </link>
-  <joint name="world_to_base_link" type="fixed">
-    <parent link="world"/>
+  <joint name="massive_block_to_base_link" type="fixed">
+    <parent link="massive_block"/>
     <child link="base_link"/>
   </joint>
   <link name="torso">

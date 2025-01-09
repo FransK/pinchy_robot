@@ -36,7 +36,7 @@ def generate_launch_description():
     pkg_ros_gz_sim = get_package_share_directory('ros_gz_sim')
 
     # Load the SDF file from "description" package
-    sdf_file  =  os.path.join(pkg_project_description, 'models', 'pinchy', 'model.sdf')
+    sdf_file  =  os.path.join(pkg_project_description, 'models', 'pinchy', 'pinchy.urdf')
     with open(sdf_file, 'r') as infp:
         robot_desc = infp.read()
 
@@ -48,7 +48,7 @@ def generate_launch_description():
             pkg_project_gazebo,
             'worlds',
             'pinchy.sdf'
-        ])}.items(),
+        ]), 'on_exit_shutdown': 'true'}.items(),
     )
 
     # Takes the description and joint angles as inputs and publishes the 3D poses of the robot links
