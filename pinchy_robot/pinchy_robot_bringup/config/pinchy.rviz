@@ -82,7 +82,7 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        massive_block:
+        root:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -181,7 +181,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: massive_block
+    Fixed Frame: root
     Frame Rate: 30
   Name: root
   Tools:

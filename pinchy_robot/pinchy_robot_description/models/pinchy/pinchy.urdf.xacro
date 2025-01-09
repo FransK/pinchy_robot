@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="pinchy">
+
+  <xacro:include filename="pinchy_core.xacro" />
+
+</robot>
