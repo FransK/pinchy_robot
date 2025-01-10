@@ -28,14 +28,14 @@ def generate_launch_description():
     declared_arguments = []
     declared_arguments.append(
         DeclareLaunchArgument(
-            "rviz",
+            "gui",
             default_value="true",
             description="Launch RViz automatically with this launch file.",
         )
     )
 
     # Initialize Arguments
-    rviz = LaunchConfiguration("rviz")
+    gui = LaunchConfiguration("gui")
 
     # Get URDF via xacro
     robot_description_content = Command(
@@ -76,19 +76,16 @@ def generate_launch_description():
         package="robot_state_publisher",
         executable="robot_state_publisher",
         output="both",
-        parameters=[
-            {'use_sim_time': True},
-            robot_description,
-        ]
+        parameters=[robot_description],
     )
 
     rviz_node = Node(
-        package="rivz2",
+        package="rviz2",
         executable="rviz2",
         name="rviz2",
         output="log",
         arguments=["-d", rviz_config_file],
-        condition=IfCondition(rviz),
+        condition=IfCondition(gui),
     )
 
     joint_state_broadcaster_spawner = Node(
@@ -129,14 +126,3 @@ def generate_launch_description():
     ]
 
     return LaunchDescription(declared_arguments + nodes)
-
-    # Bridge ROS topics and Gazebo messages for establishing communication
-    # bridge = Node(
-    #     package='ros_gz_bridge',
-    #     executable='parameter_bridge',
-    #     parameters=[{
-    #         'config_file': os.path.join(pkg_project_bringup, 'config', 'pinchy_bridge.yaml'),
-    #         'qos_overrides./tf_static.publisher.durability': 'transient_local',
-    #     }],
-    #     output='screen'
-    # )

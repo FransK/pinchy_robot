@@ -4,6 +4,11 @@ project(pinchy_robot_description)
 
 find_package(ament_cmake REQUIRED)
 
+# INSTALL
+install(
+  DIRECTORY launch/
+  DESTINATION share/${PROJECT_NAME}/launch
+)
 install(
   DIRECTORY models/
   DESTINATION share/${PROJECT_NAME}/models

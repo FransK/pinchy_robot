@@ -1,0 +1,9 @@
+<library path="pinchy_robot_application">
+  <class name="pinchy_robot_application/PinchyRobotSystemPositionOnlyHardware"
+         type="pinchy_robot_application::PinchyRobotSystemPositionOnlyHardware"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+      The ros2_control PinchyRobot using a system hardware interface-type.
+    </description>
+  </class>
+</library>

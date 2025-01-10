@@ -8,6 +8,12 @@
                 <xacro:if value="${use_gazebo}">
                     <plugin>gz_ros2_control/GazeboSimSystem</plugin>
                 </xacro:if>
+                <xacro:unless value="${use_gazebo}">
+                    <plugin>pinchy_robot_application/PinchyRobotSystemPositionOnlyHardware</plugin>
+                    <param name="example_param_hw_start_duration_sec">0</param>
+                    <param name="example_param_hw_stop_duration_sec">3.0</param>
+                    <param name="example_param_hw_slowdown">100</param>
+                </xacro:unless>
             </hardware>
 
             <joint name="base_link_to_torso">

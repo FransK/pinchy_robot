@@ -28,14 +28,14 @@ def generate_launch_description():
     declared_arguments = []
     declared_arguments.append(
         DeclareLaunchArgument(
-            "rviz",
-            default_value="true",
+            "gui",
+            default_value="false",
             description="Launch RViz automatically with this launch file.",
         )
     )
 
     # Initialize Arguments
-    rviz = LaunchConfiguration("rviz")
+    gui = LaunchConfiguration("gui")
 
     # gazebo
     gazebo = IncludeLaunchDescription(
@@ -87,23 +87,18 @@ def generate_launch_description():
         [FindPackageShare("pinchy_robot_bringup"), "config", "pinchy.rviz"]
     )
 
+    control_node = Node(
+        package="controller_manager",
+        executable="ros2_control_node",
+        parameters=[robot_controllers],
+        output="both",
+    )
+
     robot_state_pub_node = Node(
         package="robot_state_publisher",
         executable="robot_state_publisher",
         output="screen",
-        parameters=[
-            {'use_sim_time': True},
-            robot_description,
-        ]
-    )
-
-    rviz_node = Node(
-        package="rviz2",
-        executable="rviz2",
-        name="rviz2",
-        output="log",
-        arguments=["-d", rviz_config_file],
-        condition=IfCondition(rviz),
+        parameters=[robot_description],
     )
 
     joint_state_broadcaster_spawner = Node(
@@ -118,8 +113,18 @@ def generate_launch_description():
         arguments=["forward_position_controller", "--param-file", robot_controllers],
     )
 
+    rviz_node = Node(
+        package="rviz2",
+        executable="rviz2",
+        name="rviz2",
+        output="log",
+        arguments=["-d", rviz_config_file],
+        condition=IfCondition(gui),
+    )
+
     nodes = [
         gazebo,
+        control_node,
         robot_state_pub_node,
         gz_spawn_entity,
         joint_state_broadcaster_spawner,
