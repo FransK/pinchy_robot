@@ -8,7 +8,6 @@
   <license>Apache 2.0</license>
   <author>Frans Kouwenhoven</author>
 
-  <exec_depend>joint_state_publisher_gui</exec_depend>
   <exec_depend>robot_state_publisher</exec_depend>
   <exec_depend>rviz2</exec_depend>
   <exec_depend>xacro</exec_depend>

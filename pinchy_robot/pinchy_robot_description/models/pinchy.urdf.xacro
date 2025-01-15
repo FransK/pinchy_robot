@@ -18,7 +18,7 @@
     <origin xyz="0 0 0" rpy="0 0 0"/>
   </xacro:pinchy>
 
-  <xacro:pinchy_ros2_control name="PinchyRobot"/>
+  <xacro:pinchy_ros2_control name="pinchy" use_gazebo="$(arg use_gazebo)"/>
 
   <xacro:if value="$(arg use_gazebo)">
     <xacro:include filename="$(find pinchy_robot_description)/models/pinchy.gazebo.xacro" />
