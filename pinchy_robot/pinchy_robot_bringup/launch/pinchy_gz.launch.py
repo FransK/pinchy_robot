@@ -14,9 +14,7 @@
 
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
-from launch.actions import RegisterEventHandler
 from launch.conditions import IfCondition
-from launch.event_handlers import OnProcessExit
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import Command, FindExecutable, LaunchConfiguration, PathJoinSubstitution
 
@@ -105,34 +103,6 @@ def generate_launch_description():
         ]
     )
 
-    #ros2 control
-    robot_controllers = PathJoinSubstitution(
-        [
-            FindPackageShare("pinchy_robot_bringup"),
-            "config",
-            "pinchy_controllers.yaml",
-        ]
-    )
-
-    ros2_control_ = Node(
-        package="controller_manager",
-        executable="ros2_control_node",
-        parameters=[robot_controllers],
-        output="both",
-    )
-
-    joint_state_broadcaster_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
-    )
-
-    joint_trajectory_controller_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["joint_trajectory_controller", "--controller-manager", "/controller_manager", "--param-file", robot_controllers],
-    )
-
     # RViz
     rviz_config_file = PathJoinSubstitution([FindPackageShare("pinchy_robot_bringup"), "config", "pinchy.rviz"])
     rviz_node = Node(
@@ -149,25 +119,7 @@ def generate_launch_description():
         gazebo,
         gz_spawn_entity,
         node_gazebo_ros_bridge,
-        rviz_node,
-        RegisterEventHandler(
-            event_handler=OnProcessExit(
-                target_action=robot_state_publisher,
-                on_exit=[ros2_control_],
-            )
-        ),
-        RegisterEventHandler(
-            event_handler=OnProcessExit(
-                target_action=ros2_control_,
-                on_exit=[joint_state_broadcaster_spawner],
-            )
-        ),
-        RegisterEventHandler(
-            event_handler=OnProcessExit(
-                target_action=joint_state_broadcaster_spawner,
-                on_exit=[joint_trajectory_controller_spawner],
-            )
-        ),
+        rviz_node
     ]
 
     return LaunchDescription(declared_arguments + nodes)
