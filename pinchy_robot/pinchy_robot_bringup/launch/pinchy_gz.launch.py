@@ -90,7 +90,8 @@ def generate_launch_description():
         package="robot_state_publisher",
         executable="robot_state_publisher",
         output="screen",
-        parameters=[robot_description],
+        parameters=[robot_description,
+                    {"use_sim_time": use_sim_time}],
     )
     gz_spawn_entity = Node(
         package="ros_gz_sim",
