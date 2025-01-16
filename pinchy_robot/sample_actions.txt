@@ -20,4 +20,6 @@ trajectory_msgs/JointTrajectory trajectory
 
 
 # Sample message
+ros2 action send_goal /joint_trajectory_controller/follow_joint_trajectory control_msgs/action/FollowJointTrajectory "{trajectory: {joint_names: [base_link_to_torso], points: [{positions: [3.14159], time_from_start: {sec: 2.5, nanosec: 0.0}}, {positions: [0.0], time_from_start: {sec: 5.0, nanosec: 0.0}}]}}"
 ros2 action send_goal /joint_trajectory_controller/follow_joint_trajectory control_msgs/action/FollowJointTrajectory "{trajectory: {joint_names: [torso_to_upper_arm, upper_arm_to_lower_arm], points: [{positions: [-0.5, -0.5], time_from_start: {sec: 5.0, nanosec: 0.0}}]}}"
+ros2 action send_goal /joint_trajectory_controller/follow_joint_trajectory control_msgs/action/FollowJointTrajectory "{trajectory: {joint_names: [base_link_to_torso, torso_to_upper_arm, upper_arm_to_lower_arm, lower_arm_to_hand], points: [{positions: [3.14159, -1.0, 3.0, -1.5], time_from_start: {sec: 6.5, nanosec: 0.0}}, {positions: [0.0, 0.0, 0.0, 0.0], time_from_start: {sec: 13.0, nanosec: 0.0}}]}}"
