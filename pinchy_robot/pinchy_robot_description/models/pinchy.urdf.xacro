@@ -3,7 +3,8 @@
   <xacro:arg name="use_gazebo" default="false" />
   
   <!-- Import pinchy macro -->
-  <xacro:include filename="$(find pinchy_robot_description)/models/pinchy_description.urdf.xacro" />
+  <!-- <xacro:include filename="$(find pinchy_robot_description)/models/pinchy_description.urdf.xacro" /> -->
+  <xacro:include filename="$(find pinchy_robot_description)/models/pinchy_onshape.urdf.xacro" />
 
   <!-- Import pinchy Rviz colors -->
   <xacro:include filename="$(find pinchy_robot_description)/models/pinchy.materials.xacro" />
