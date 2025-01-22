@@ -5,279 +5,9 @@
         <joint name="base_joint" type="fixed">
             <xacro:insert_block name="origin" />
             <parent link="${parent}"/>
-            <child link="ebamk2_01"/>
+            <child link="012_base"/>
         </joint>
-        <link name="ebamk2_01">
-            <visual>
-                <origin xyz="-5.5511151231257827021e-17 -3.0531133177191804862e-16 0.055000000000000000278" rpy="0 -0 0" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/019_cover.stl"/>
-                </geometry>
-                <material name="019_cover_material">
-                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
-                </material>
-            </visual>
-            <collision>
-                <origin xyz="-5.5511151231257827021e-17 -3.0531133177191804862e-16 0.055000000000000000278" rpy="0 -0 0" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/019_cover.stl"/>
-                </geometry>
-            </collision>
-            <visual>
-                <origin xyz="-0.077521953777895197257 0.017450000000000184114 0.16240998276599685757" rpy="-1.57079632679489678 1.2595196814508191618 -3.587091702238113726e-15" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/004_link_135.stl"/>
-                </geometry>
-                <material name="004_link_135_material">
-                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
-                </material>
-            </visual>
-            <collision>
-                <origin xyz="-0.077521953777895197257 0.017450000000000184114 0.16240998276599685757" rpy="-1.57079632679489678 1.2595196814508191618 -3.587091702238113726e-15" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/004_link_135.stl"/>
-                </geometry>
-            </collision>
-            <visual>
-                <origin xyz="-0.041347014264275810946 0.0075000000000001940115 0.22251235120185899885" rpy="1.28750165166221252e-17 0.072938465057714174655 -7.7917086115702568255e-16" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/006_horarm.stl"/>
-                </geometry>
-                <material name="006_horarm_material">
-                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
-                </material>
-            </visual>
-            <collision>
-                <origin xyz="-0.041347014264275810946 0.0075000000000001940115 0.22251235120185899885" rpy="1.28750165166221252e-17 0.072938465057714174655 -7.7917086115702568255e-16" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/006_horarm.stl"/>
-                </geometry>
-            </collision>
-            <visual>
-                <origin xyz="-8.1315162936412832551e-18 -0.0047499999999998229402 0.094000000000000305533" rpy="1.0835300051899406739e-23 0.31127664534406818131 -3.141592653589793116" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/002_mainarm.stl"/>
-                </geometry>
-                <material name="002_mainarm_material">
-                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
-                </material>
-            </visual>
-            <collision>
-                <origin xyz="-8.1315162936412832551e-18 -0.0047499999999998229402 0.094000000000000305533" rpy="1.0835300051899406739e-23 0.31127664534406818131 -3.141592653589793116" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/002_mainarm.stl"/>
-                </geometry>
-            </collision>
-            <visual>
-                <origin xyz="-9.7578195523695399061e-18 0.012499999999999998959 0.094000000000000361045" rpy="1.5707963267948961139 -0.072938465057712273398 -3.1415926535897886751" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/003_varm.stl"/>
-                </geometry>
-                <material name="003_varm_material">
-                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
-                </material>
-            </visual>
-            <collision>
-                <origin xyz="-9.7578195523695399061e-18 0.012499999999999998959 0.094000000000000361045" rpy="1.5707963267948961139 -0.072938465057712273398 -3.1415926535897886751" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/003_varm.stl"/>
-                </geometry>
-            </collision>
-            <visual>
-                <origin xyz="-0.058640671234613701845 -0.028000000000000028338 0.17844708794141250774" rpy="1.5707963267948970021 1.2595638153782562352 6.1279042503906534502e-16" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/005_link_135angled.stl"/>
-                </geometry>
-                <material name="005_link_135angled_material">
-                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
-                </material>
-            </visual>
-            <collision>
-                <origin xyz="-0.058640671234613701845 -0.028000000000000028338 0.17844708794141250774" rpy="1.5707963267948970021 1.2595638153782562352 6.1279042503906534502e-16" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/005_link_135angled.stl"/>
-                </geometry>
-            </collision>
-            <visual>
-                <origin xyz="-0.041347014264275810946 -0.017999999999999963946 0.22251235120185897109" rpy="1.3613777337522821842e-16 -0.11075260660638287791 7.1063529481317348565e-16" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/007_trialink.stl"/>
-                </geometry>
-                <material name="007_trialink_material">
-                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
-                </material>
-            </visual>
-            <collision>
-                <origin xyz="-0.041347014264275810946 -0.017999999999999963946 0.22251235120185897109" rpy="1.3613777337522821842e-16 -0.11075260660638287791 7.1063529481317348565e-16" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/007_trialink.stl"/>
-                </geometry>
-            </collision>
-            <visual>
-                <origin xyz="0.144596616696111957 0.0095000000000000917044 0.20551191616111610938" rpy="-0.0053924056026272400646 -1.2840784026583640671e-17 1.57079632679489678" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/009_trialinkfront.stl"/>
-                </geometry>
-                <material name="009_trialinkfront_material">
-                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
-                </material>
-            </visual>
-            <collision>
-                <origin xyz="0.144596616696111957 0.0095000000000000917044 0.20551191616111610938" rpy="-0.0053924056026272400646 -1.2840784026583640671e-17 1.57079632679489678" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/009_trialinkfront.stl"/>
-                </geometry>
-            </collision>
-            <visual>
-                <origin xyz="0.064580816203494914585 -0.012499999999999915692 0.24551395098635669934" rpy="-1.57079632679489678 -0.068592470445640985055 -3.141592653589793116" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/008_link_147.stl"/>
-                </geometry>
-                <material name="008_link_147_material">
-                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
-                </material>
-            </visual>
-            <collision>
-                <origin xyz="0.064580816203494914585 -0.012499999999999915692 0.24551395098635669934" rpy="-1.57079632679489678 -0.068592470445640985055 -3.141592653589793116" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/008_link_147.stl"/>
-                </geometry>
-            </collision>
-            <visual>
-                <origin xyz="2.6994476459291364042e-20 -6.9545450918851814888e-18 0.04399999999999997663" rpy="-1.570796326794896558 3.085794127094923517e-17 3.0531133177191790071e-16" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/011_gearmast.stl"/>
-                </geometry>
-                <material name="011_gearmast_material">
-                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
-                </material>
-            </visual>
-            <collision>
-                <origin xyz="2.6994476459291364042e-20 -6.9545450918851814888e-18 0.04399999999999997663" rpy="-1.570796326794896558 3.085794127094923517e-17 3.0531133177191790071e-16" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/011_gearmast.stl"/>
-                </geometry>
-            </collision>
-            <visual>
-                <origin xyz="2.6994476459291364042e-20 -7.5066371290320510149e-18 0.05100000000000034367" rpy="-3.0857941270949247496e-17 1.3530368400154893524e-16 -1.570796326794896336" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/001_base.stl"/>
-                </geometry>
-                <material name="001_base_material">
-                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
-                </material>
-            </visual>
-            <collision>
-                <origin xyz="2.6994476459291364042e-20 -7.5066371290320510149e-18 0.05100000000000034367" rpy="-3.0857941270949247496e-17 1.3530368400154893524e-16 -1.570796326794896336" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/001_base.stl"/>
-                </geometry>
-            </collision>
-            <visual>
-                <origin xyz="0.15911393111412186485 -0.0082500000000000142664 0.20234015291511628365" rpy="1.57079632679489678 -0.0053924056026273285355 1.7007275237094101779e-16" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/015_clawfingerdx.stl"/>
-                </geometry>
-                <material name="015_clawfingerdx_material">
-                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
-                </material>
-            </visual>
-            <collision>
-                <origin xyz="0.15911393111412186485 -0.0082500000000000142664 0.20234015291511628365" rpy="1.57079632679489678 -0.0053924056026273285355 1.7007275237094101779e-16" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/015_clawfingerdx.stl"/>
-                </geometry>
-            </collision>
-            <visual>
-                <origin xyz="0.1591570701498783158 0.0098500000000001728534 0.1943402692269873" rpy="-1.57079632679489678 0.0053924056026275367023 -3.141592653589793116" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/018_clawgeardriven.stl"/>
-                </geometry>
-                <material name="018_clawgeardriven_material">
-                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
-                </material>
-            </visual>
-            <collision>
-                <origin xyz="0.1591570701498783158 0.0098500000000001728534 0.1943402692269873" rpy="-1.57079632679489678 0.0053924056026275367023 -3.141592653589793116" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/018_clawgeardriven.stl"/>
-                </geometry>
-            </collision>
-            <visual>
-                <origin xyz="0.15913010825253029457 0.0098500000000002040784 0.19934019653206841438" rpy="-1.570796326794896558 -0.0053924056026275367023 1.9262467072907309726e-16" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/017_clawfingersx.stl"/>
-                </geometry>
-                <material name="017_clawfingersx_material">
-                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
-                </material>
-            </visual>
-            <collision>
-                <origin xyz="0.15913010825253029457 0.0098500000000002040784 0.19934019653206841438" rpy="-1.570796326794896558 -0.0053924056026275367023 1.9262467072907309726e-16" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/017_clawfingersx.stl"/>
-                </geometry>
-            </collision>
-            <visual>
-                <origin xyz="0.1506124369816431996 0.00080000000000009772495 0.20259431332793384484" rpy="2.200788658670739257e-16 -0.0053924056026274490988 6.6514904437885131297e-17" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/014_clawbase.stl"/>
-                </geometry>
-                <material name="014_clawbase_material">
-                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
-                </material>
-            </visual>
-            <collision>
-                <origin xyz="0.1506124369816431996 0.00080000000000009772495 0.20259431332793384484" rpy="2.200788658670739257e-16 -0.0053924056026274490988 6.6514904437885131297e-17" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/014_clawbase.stl"/>
-                </geometry>
-            </collision>
-            <visual>
-                <origin xyz="0.17702876952882731776 0.00080000000000008785871 0.19963671721675127491" rpy="1.5674289197461475087 -0.0042117306419376041027 0.67445787343180263473" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/016.stl"/>
-                </geometry>
-                <material name="016_material">
-                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
-                </material>
-            </visual>
-            <collision>
-                <origin xyz="0.17702876952882731776 0.00080000000000008785871 0.19963671721675127491" rpy="1.5674289197461475087 -0.0042117306419376041027 0.67445787343180263473" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/016.stl"/>
-                </geometry>
-            </collision>
-            <visual>
-                <origin xyz="0 -3.4694469519536141888e-18 0.034000000000000002442" rpy="0 -0 0" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/013_lower_base.stl"/>
-                </geometry>
-                <material name="013_lower_base_material">
-                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
-                </material>
-            </visual>
-            <collision>
-                <origin xyz="0 -3.4694469519536141888e-18 0.034000000000000002442" rpy="0 -0 0" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/013_lower_base.stl"/>
-                </geometry>
-            </collision>
-            <visual>
-                <origin xyz="-0.056299999999969936593 -0.00075000000000000760503 0.04445000000002000129" rpy="-1.570796326794896558 -0 1.570796326794896558" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/010_gearservo.stl"/>
-                </geometry>
-                <material name="010_gearservo_material">
-                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
-                </material>
-            </visual>
-            <collision>
-                <origin xyz="-0.056299999999969936593 -0.00075000000000000760503 0.04445000000002000129" rpy="-1.570796326794896558 -0 1.570796326794896558" />
-                <geometry>
-                    <mesh filename="package://pinchy_robot_description/models/mesh/010_gearservo.stl"/>
-                </geometry>
-            </collision>
+        <link name="012_base">
             <visual>
                 <origin xyz="0 0 0" rpy="0 -0 0" />
                 <geometry>
@@ -293,9 +23,608 @@
                     <mesh filename="package://pinchy_robot_description/models/mesh/012_base.stl"/>
                 </geometry>
             </collision>
+            <inertial>
+                <origin xyz="-0.033485894275804402309 -1.2001011211791619353e-09 0.021753373316492456702" rpy="0 0 0"/>
+                <mass value="0.11759175314133056556" />
+                <inertia ixx="0.00010757491305669516222" ixy="9.6951976383166017242e-12" ixz="-1.129955118934984161e-05" iyy="0.00028157118801149162062" iyz="-1.1113073360885274726e-12" izz="0.00033120803272819855992" />
+            </inertial>
         </link>
 
+        <link name="013_lower_base">
+            <visual>
+                <origin xyz="0.040500000000000008216 0.0240000000000000005 0" rpy="3.141592653589793116 -0 0" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/013_lower_base.stl"/>
+                </geometry>
+                <material name="013_lower_base_material">
+                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="0.040500000000000008216 0.0240000000000000005 0" rpy="3.141592653589793116 -0 0" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/013_lower_base.stl"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="0.038334151784957443132 0.023999999999999774986 -0.003861060291331577278" rpy="0 0 0"/>
+                <mass value="0.050632060796438636829" />
+                <inertia ixx="2.3412926852668567671e-05" ixy="0" ixz="-5.1918600718263601986e-09" iyy="2.418011164816487058e-05" iyz="0" izz="4.7075071061242765649e-05" />
+            </inertial>
+        </link>
+
+        <link name="011_gearmast">
+            <visual>
+                <origin xyz="-3.0814879110195773649e-33 0 0.00074118095489748153648" rpy="-1.570796326794896558 -1.9721522630525290756e-31 2.8808654239159165536e-18" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/011_gearmast.stl"/>
+                </geometry>
+                <material name="011_gearmast_material">
+                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="-3.0814879110195773649e-33 0 0.00074118095489748153648" rpy="-1.570796326794896558 -1.9721522630525290756e-31 2.8808654239159165536e-18" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/011_gearmast.stl"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="0.0011448146623121613526 -4.5614544122798960911e-08 0.0043556640618009276333" rpy="0 0 0"/>
+                <mass value="0.037429445757737357658" />
+                <inertia ixx="1.3678283742239876844e-05" ixy="-1.8558228083068321185e-12" ixz="4.9208020155399961048e-09" iyy="1.3452672074635373909e-05" iyz="-8.9136290706351023319e-13" izz="2.6827475442753630485e-05" />
+            </inertial>
+        </link>
+
+        <link name="001_base">
+            <visual>
+                <origin xyz="-5.5059794306154815924e-18 -2.5229826121639363311e-20 0" rpy="3.141592653589793116 -0 1.292162160811374467e-17" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/001_base.stl"/>
+                </geometry>
+                <material name="001_base_material">
+                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="-5.5059794306154815924e-18 -2.5229826121639363311e-20 0" rpy="3.141592653589793116 -0 1.292162160811374467e-17" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/001_base.stl"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="0.001161673545557385728 0.00092317800064807868047 -0.020499360341960613796" rpy="0 0 0"/>
+                <mass value="0.17975423326260306367" />
+                <inertia ixx="0.00012231885879902305598" ixy="-3.4507707064030143545e-06" ixz="5.818271012981028621e-06" iyy="0.00012893735685722983089" iyz="5.8342500739731076949e-06" izz="0.00014275976070929840243" />
+            </inertial>
+        </link>
+
+        <link name="closing_001_005_2">
+            <inertial>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <mass value="1e-9" />
+                <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+            </inertial>
+        </link>
+        <joint name="closing_001_005_2_frame" type="fixed">
+            <origin xyz="0.027999999999999986705 0.037969999999999996809 -0.063189999999999996172" rpy="1.2921621608113746211e-17 -1.570796326794896558 0" />
+            <parent link="001_base" />
+            <child link="closing_001_005_2" />
+            <axis xyz="0 0 0"/>
+        </joint>
+
+        <link name="003_varm">
+            <visual>
+                <origin xyz="0 1.3877787807814456755e-17 0" rpy="-5.4702925957144849332e-18 1.9477237810650893854e-18 -2.7565511512361946476e-17" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/003_varm.stl"/>
+                </geometry>
+                <material name="003_varm_material">
+                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="0 1.3877787807814456755e-17 0" rpy="-5.4702925957144849332e-18 1.9477237810650893854e-18 -2.7565511512361946476e-17" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/003_varm.stl"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="0.020430554246132628243 0.00055877620043399446603 0.0054371933906984196844" rpy="0 0 0"/>
+                <mass value="0.015276016785753359847" />
+                <inertia ixx="7.9306883740486598291e-07" ixy="-1.3538496626389067956e-07" ixz="-4.2655352640383078964e-07" iyy="6.6187561149688319391e-06" iyz="-9.1660691416123990385e-09" izz="6.935882283253829678e-06" />
+            </inertial>
+        </link>
+
+        <link name="closing_003_004_2">
+            <inertial>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <mass value="1e-9" />
+                <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+            </inertial>
+        </link>
+        <joint name="closing_003_004_2_frame" type="fixed">
+            <origin xyz="0.056999999999999995115 1.3877787807814456755e-17 0.0050000000000000044409" rpy="1.7743817425140666063e-16 -5.4702925957144849332e-18 -1.570796326794896558" />
+            <parent link="003_varm" />
+            <child link="closing_003_004_2" />
+            <axis xyz="0 0 0"/>
+        </joint>
+
+        <joint name="001_003" type="revolute">
+            <origin xyz="-0.012499999999999976408 3.1170380091756358422e-17 -0.043000000000000072886" rpy="-1.5707963267948961139 -0.34187976534138431184 1.570796326794891451" />
+            <parent link="001_base" />
+            <child link="003_varm" />
+            <axis xyz="0 0 1"/>
+            <limit effort="1" velocity="20" lower="-0.34906585039886589561" upper="1.570796326794896558"/>
+            <joint_properties friction="0.0"/>
+        </joint>
+
+        <link name="002_mainarm">
+            <visual>
+                <origin xyz="-1.084202172485504434e-19 0 0.0082500000000000003886" rpy="-1.570796326794896558 2.1823454752613109057e-18 3.3366817323438506917e-19" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/002_mainarm.stl"/>
+                </geometry>
+                <material name="002_mainarm_material">
+                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="-1.084202172485504434e-19 0 0.0082500000000000003886" rpy="-1.570796326794896558 2.1823454752613109057e-18 3.3366817323438506917e-19" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/002_mainarm.stl"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="-0.0045289479351360746595 0.058063314437010481173 0.010438692473920995613" rpy="0 0 0"/>
+                <mass value="0.089768612982453629967" />
+                <inertia ixx="0.0001937977516965140091" ixy="1.4539001404579357045e-06" ixz="4.0937771123815081593e-07" iyy="1.5304948332152038372e-05" iyz="-1.0315307235679156346e-06" izz="0.00019169602556341142964" />
+            </inertial>
+        </link>
+
+        <link name="006_horarm">
+            <visual>
+                <origin xyz="-1.3877787807814456755e-17 5.5511151231257827021e-17 0.0070000000000000096867" rpy="1.570796326794896558 -4.5456754938217338643e-18 2.7501720434233651453e-17" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/006_horarm.stl"/>
+                </geometry>
+                <material name="006_horarm_material">
+                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="-1.3877787807814456755e-17 5.5511151231257827021e-17 0.0070000000000000096867" rpy="1.570796326794896558 -4.5456754938217338643e-18 2.7501720434233651453e-17" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/006_horarm.stl"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="0.037081019082547544974 -0.012440624561641983742 0.0052158263862915575648" rpy="0 0 0"/>
+                <mass value="0.048591753045881098949" />
+                <inertia ixx="6.9180719655106428538e-06" ixy="-7.7587950973342026146e-07" ixz="5.5264376053445061674e-06" iyy="0.00017341308471727632698" iyz="-5.8856462243627338052e-07" izz="0.00017375882723609457881" />
+            </inertial>
+        </link>
+
+        <link name="004_link_135">
+            <visual>
+                <origin xyz="0.067500000000000004441 6.9388939039072283776e-18 0" rpy="3.141592653589793116 -2.5188606190069347121e-20 8.6056033951546834967e-19" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/004_link_135.stl"/>
+                </geometry>
+                <material name="004_link_135_material">
+                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="0.067500000000000004441 6.9388939039072283776e-18 0" rpy="3.141592653589793116 -2.5188606190069347121e-20 8.6056033951546834967e-19" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/004_link_135.stl"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="0.061566180034662437714 -7.4331604100895089376e-06 -0.0026781866772535834441" rpy="0 0 0"/>
+                <mass value="0.0073925768006856623984" />
+                <inertia ixx="8.4434163215744435967e-08" ixy="3.1852089383480811687e-10" ixz="-2.1645499427877087097e-07" iyy="1.6665438826907819157e-05" iyz="1.3976046566861515002e-10" izz="1.6683971677717026428e-05" />
+            </inertial>
+        </link>
+
+        <link name="closing_003_004_1">
+            <inertial>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <mass value="1e-9" />
+                <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+            </inertial>
+        </link>
+        <joint name="closing_003_004_1_frame" type="fixed">
+            <origin xyz="0.13500000000000000888 0 -0.0054999999999999979461" rpy="3.141592653589793116 -2.5188606190069347121e-20 8.6056033951546834967e-19" />
+            <parent link="004_link_135" />
+            <child link="closing_003_004_1" />
+            <axis xyz="0 0 0"/>
+        </joint>
+
+        <joint name="006_004" type="revolute">
+            <origin xyz="-0.056999999999999897971 5.5511151231257827021e-17 0.016949999999999923461" rpy="3.1415926535897829019 -1.1404653729897006087e-15 1.9189173052929333618" />
+            <parent link="006_horarm" />
+            <child link="004_link_135" />
+            <axis xyz="0 0 1"/>
+            <limit effort="1" velocity="20" lower="-3.141592653589793116" upper="3.141592653589793116"/>
+            <joint_properties friction="0.0"/>
+        </joint>
+
+        <link name="009_trialinkfront">
+            <visual>
+                <origin xyz="-0.039299999999999973843 -0.0065000000000000057732 0" rpy="-1.570796326794896558 -1.570796326794896558 0" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/009_trialinkfront.stl"/>
+                </geometry>
+                <material name="009_trialinkfront_material">
+                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="-0.039299999999999973843 -0.0065000000000000057732 0" rpy="-1.570796326794896558 -1.570796326794896558 0" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/009_trialinkfront.stl"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="-0.023138260045836359785 0.0096562717419969787414 -0.0090452320899661580594" rpy="0 0 0"/>
+                <mass value="0.0189608862271356364" />
+                <inertia ixx="3.3194985728346409084e-06" ixy="1.1299894138345396453e-06" ixz="-3.2618401827615348336e-07" iyy="3.1952109322463245677e-06" iyz="3.7054522324610338663e-07" izz="5.2884049184070572468e-06" />
+            </inertial>
+        </link>
+
+        <link name="closing_008_009_1">
+            <inertial>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <mass value="1e-9" />
+                <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+            </inertial>
+        </link>
+        <joint name="closing_008_009_1_frame" type="fixed">
+            <origin xyz="-0.032799999999999995826 0.028500000000000025313 -0.021999999999999991784" rpy="3.141592653589793116 -1.333558707328117286e-18 -5.6421514710208415262e-18" />
+            <parent link="009_trialinkfront" />
+            <child link="closing_008_009_1" />
+            <axis xyz="0 0 0"/>
+        </joint>
+
+        <link name="014_clawbase">
+            <visual>
+                <origin xyz="-0.0016999999999999957853 0.020300000000000040234 -0.0060000000000000053291" rpy="1.570796326794896558 1.570796326794896558 0" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/014_clawbase.stl"/>
+                </geometry>
+                <material name="014_clawbase_material">
+                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="-0.0016999999999999957853 0.020300000000000040234 -0.0060000000000000053291" rpy="1.570796326794896558 1.570796326794896558 0" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/014_clawbase.stl"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="-0.00187903453409056162 0.012684764644607040771 -0.012449562627841501833" rpy="0 0 0"/>
+                <mass value="0.010159282220900709565" />
+                <inertia ixx="2.8161631051851272297e-06" ixy="-2.0681515990841500007e-08" ixz="2.6448338684182080011e-08" iyy="2.8740865083613716925e-06" iyz="5.3943746192763577495e-07" izz="1.0774908755333263475e-06" />
+            </inertial>
+        </link>
+
+        <link name="015_clawfingerdx">
+            <visual>
+                <origin xyz="-2.7755575615628913511e-17 -1.7347234759768070944e-18 -0.00029999999999996695976" rpy="1.570796326794896558 2.1992640069618910157e-18 1.6435800556943946552e-17" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/015_clawfingerdx.stl"/>
+                </geometry>
+                <material name="015_clawfingerdx_material">
+                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="-2.7755575615628913511e-17 -1.7347234759768070944e-18 -0.00029999999999996695976" rpy="1.570796326794896558 2.1992640069618910157e-18 1.6435800556943946552e-17" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/015_clawfingerdx.stl"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="0.018455747659032642471 0.002533906302647876644 -0.0012325548331221388397" rpy="0 0 0"/>
+                <mass value="0.0017886183280535160583" />
+                <inertia ixx="2.7268812321605311324e-08" ixy="-3.5813623681470498922e-08" ixz="-1.9991865655434492885e-08" iyy="5.1662283716070205294e-07" iyz="-4.5698409967013678278e-09" izz="5.3293341889482594016e-07" />
+            </inertial>
+        </link>
+
+        <joint name="014_015" type="fixed">
+            <origin xyz="-0.010749999999999980058 0.020300000000003759482 -0.014499999999999541034" rpy="1.570796326794896558 1.570796326794896558 0" />
+            <parent link="014_clawbase" />
+            <child link="015_clawfingerdx" />
+            <axis xyz="0 0 1"/>
+            <limit effort="1" velocity="20" />
+            <joint_properties friction="0.0"/>
+        </joint>
+
+        <link name="017_clawfingersx">
+            <visual>
+                <origin xyz="5.5511151231257827021e-17 -1.7347234759768070944e-18 -0.0032999999999999696243" rpy="-1.570796326794896558 2.1849932986125573361e-18 9.2119388956867189519e-19" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/017_clawfingersx.stl"/>
+                </geometry>
+                <material name="017_clawfingersx_material">
+                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="5.5511151231257827021e-17 -1.7347234759768070944e-18 -0.0032999999999999696243" rpy="-1.570796326794896558 2.1849932986125573361e-18 9.2119388956867189519e-19" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/017_clawfingersx.stl"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="0.018812086748628161631 -0.0025600078614870791505 -0.0012092355891363752284" rpy="0 0 0"/>
+                <mass value="0.0017289482656387804033" />
+                <inertia ixx="2.6945353811716058175e-08" ixy="3.4907708389775124822e-08" ixz="-1.8961027589390269496e-08" iyy="5.0190649161374488212e-07" iyz="4.4234371214567529165e-09" izz="5.1825789788917858486e-07" />
+            </inertial>
+        </link>
+
+        <link name="018_clawgeardriven">
+            <visual>
+                <origin xyz="0 1.7347234759768070944e-18 -0.005000000000000059952" rpy="-1.570796326794896558 -1.8323584023927108254e-18 2.0575607717766046981e-17" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/018_clawgeardriven.stl"/>
+                </geometry>
+                <material name="018_clawgeardriven_material">
+                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="0 1.7347234759768070944e-18 -0.005000000000000059952" rpy="-1.570796326794896558 -1.8323584023927108254e-18 2.0575607717766046981e-17" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/018_clawgeardriven.stl"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="-1.7230839811702217361e-06 0.0016346299156224167182 -0.0025169330447531133854" rpy="0 0 0"/>
+                <mass value="0.0016432484276812280369" />
+                <inertia ixx="4.3940469046301066529e-08" ixy="9.2068379919182241127e-12" ixz="-1.6487089256643701574e-12" iyy="4.3401024087893512334e-08" iyz="4.7246181535537854564e-09" izz="7.8152690487289344876e-08" />
+            </inertial>
+        </link>
+
+        <joint name="017_018" type="fixed">
+            <origin xyz="5.5511151231257827021e-17 7.1123662515049090871e-17 -0.0033000000000000251354" rpy="4.153834613868718537e-17 2.9030515463403735584e-17 3.141592653589793116" />
+            <parent link="017_clawfingersx" />
+            <child link="018_clawgeardriven" />
+            <axis xyz="0 0 1"/>
+            <limit effort="1" velocity="20" />
+            <joint_properties friction="0.0"/>
+        </joint>
+
+        <joint name="014_017" type="fixed">
+            <origin xyz="0.0073499999999999537925 0.02030000000000370397 -0.014499999999999457767" rpy="1.570796326794896558 1.570796326794896558 0" />
+            <parent link="014_clawbase" />
+            <child link="017_clawfingersx" />
+            <axis xyz="0 0 1"/>
+            <limit effort="1" velocity="20" />
+            <joint_properties friction="0.0"/>
+        </joint>
+
+        <joint name="009_014" type="fixed">
+            <origin xyz="-0.039299999999999751799 0.010850000000003079403 -0.0070000000000000747388" rpy="3.141592653589793116 -1.5707963267948945596 0" />
+            <parent link="009_trialinkfront" />
+            <child link="014_clawbase" />
+            <axis xyz="0 0 1"/>
+            <limit effort="1" velocity="20" />
+            <joint_properties friction="0.0"/>
+        </joint>
+
+        <joint name="006_009" type="revolute">
+            <origin xyz="0.14699999999999999178 -3.6082248300317587564e-16 0.0090000000000003185091" rpy="-2.1839923106395194717e-15 4.2650455435951414437e-15 -2.821091507630565598" />
+            <parent link="006_horarm" />
+            <child link="009_trialinkfront" />
+            <axis xyz="0 0 1"/>
+            <limit effort="1" velocity="20" lower="-3.141592653589793116" upper="3.141592653589793116"/>
+            <joint_properties friction="0.0"/>
+        </joint>
+
+        <joint name="002_006" type="revolute">
+            <origin xyz="-7.6978354246470814815e-18 0.13499999999999998113 0.013500000000000010256" rpy="-4.3503096927766494401e-17 4.604500145230080503e-15 2.7934716750917525374" />
+            <parent link="002_mainarm" />
+            <child link="006_horarm" />
+            <axis xyz="0 0 1"/>
+            <limit effort="1" velocity="20" lower="-3.141592653589793116" upper="3.141592653589793116"/>
+            <joint_properties friction="0.0"/>
+        </joint>
+
+        <link name="007_trialink">
+            <visual>
+                <origin xyz="0 0 0.003000000000000006134" rpy="1.570796326794896558 -1.906240574386896635e-17 1.7498017576654526627e-17" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/007_trialink.stl"/>
+                </geometry>
+                <material name="007_trialink_material">
+                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0.003000000000000006134" rpy="1.570796326794896558 -1.906240574386896635e-17 1.7498017576654526627e-17" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/007_trialink.stl"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="-0.00059022729070759506666 -0.014881444048415185671 0.00050174232942519405437" rpy="0 0 0"/>
+                <mass value="0.023421445179780536749" />
+                <inertia ixx="2.4030086788760104121e-06" ixy="-1.3882584188564428979e-07" ixz="-3.4438410484124055412e-08" iyy="8.1820709705349406091e-06" iyz="-2.9879442802538696652e-07" izz="9.3619592049011330812e-06" />
+            </inertial>
+        </link>
+
+        <link name="005_link_135angled">
+            <visual>
+                <origin xyz="0.067500000000000032196 6.9388939039072283776e-18 3.4694469519536141888e-18" rpy="3.141592653589793116 -8.0143918138122637521e-20 -6.9103579729280628186e-19" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/005_link_135angled.stl"/>
+                </geometry>
+                <material name="005_link_135angled_material">
+                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="0.067500000000000032196 6.9388939039072283776e-18 3.4694469519536141888e-18" rpy="3.141592653589793116 -8.0143918138122637521e-20 -6.9103579729280628186e-19" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/005_link_135angled.stl"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="0.067500000609837185195 0.010057278661887802604 -0.0021876298145593691367" rpy="0 0 0"/>
+                <mass value="0.0077053486395657760921" />
+                <inertia ixx="3.6173842770585507424e-07" ixy="-3.104013751683351015e-16" ixz="8.8218297759196777646e-15" iyy="1.5881834954366584513e-05" iyz="-1.2143453383383392913e-08" izz="1.6212102875229690471e-05" />
+            </inertial>
+        </link>
+
+        <link name="closing_001_005_1">
+            <inertial>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <mass value="1e-9" />
+                <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+            </inertial>
+        </link>
+        <joint name="closing_001_005_1_frame" type="fixed">
+            <origin xyz="0.13500000000000000888 0 3.4694469519536141888e-18" rpy="-1.2392625445195870872e-18 -8.0143918138122637521e-20 -6.9103579729280628186e-19" />
+            <parent link="005_link_135angled" />
+            <child link="closing_001_005_1" />
+            <axis xyz="0 0 0"/>
+        </joint>
+
+        <joint name="007_005" type="revolute">
+            <origin xyz="-0.035500000000000010714 -0.024264171117101857034 -0.0070000000000000235645" rpy="2.463162117466541951e-14 6.0122040400021987686e-15 1.6878736915643939298" />
+            <parent link="007_trialink" />
+            <child link="005_link_135angled" />
+            <axis xyz="0 0 1"/>
+            <limit effort="1" velocity="20" lower="-3.141592653589793116" upper="3.141592653589793116"/>
+            <joint_properties friction="0.0"/>
+        </joint>
+
+        <link name="008_link_147">
+            <visual>
+                <origin xyz="-0.073499999999999995892 0 -0.0054999999999999979461" rpy="2.6640780761390987942e-18 -2.9486375568116466056e-18 3.9906951509069654153e-17" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/008_link_147.stl"/>
+                </geometry>
+                <material name="008_link_147_material">
+                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="-0.073499999999999995892 0 -0.0054999999999999979461" rpy="2.6640780761390987942e-18 -2.9486375568116466056e-18 3.9906951509069654153e-17" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/008_link_147.stl"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="-0.079608702972885581062 -1.0715030722107185667e-11 -0.0028608708783207483298" rpy="0 0 0"/>
+                <mass value="0.0078781842360880309506" />
+                <inertia ixx="8.8007080010220035713e-08" ixy="-6.3462977012134550908e-14" ixz="2.3752941329921658389e-07" iyy="2.0664749782104564594e-05" iyz="1.5390202794157018288e-15" izz="2.0684824135934338883e-05" />
+            </inertial>
+        </link>
+
+        <link name="closing_008_009_2">
+            <inertial>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <mass value="1e-9" />
+                <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+            </inertial>
+        </link>
+        <joint name="closing_008_009_2_frame" type="fixed">
+            <origin xyz="-0.14700000000000001954 0 -0.0054999999999999996808" rpy="2.6640780761390987942e-18 -2.9486375568116466056e-18 3.9906951509069654153e-17" />
+            <parent link="008_link_147" />
+            <child link="closing_008_009_2" />
+            <axis xyz="0 0 0"/>
+        </joint>
+
+        <joint name="007_008" type="revolute">
+            <origin xyz="0.035499999999999823364 -0.024264171117102245612 0.0030000000000000547062" rpy="3.1415926535897926719 2.5340002699685060181e-15 2.9021702287712511925" />
+            <parent link="007_trialink" />
+            <child link="008_link_147" />
+            <axis xyz="0 0 1"/>
+            <limit effort="1" velocity="20" lower="-3.141592653589793116" upper="3.141592653589793116"/>
+            <joint_properties friction="0.0"/>
+        </joint>
+
+        <joint name="002_007" type="revolute">
+            <origin xyz="-4.4452289071905681794e-18 0.13499999999999998113 -0.0079999999999997295497" rpy="2.3271486643485758246e-15 1.0326982802161578589e-15 3.0245499989440287614" />
+            <parent link="002_mainarm" />
+            <child link="007_trialink" />
+            <axis xyz="0 0 1"/>
+            <limit effort="1" velocity="20" lower="-3.141592653589793116" upper="3.141592653589793116"/>
+            <joint_properties friction="0.0"/>
+        </joint>
+
+        <joint name="001_002" type="revolute">
+            <origin xyz="0.013000000000000018485 -2.8736893352823243273e-17 -0.043000000000000017375" rpy="-1.570796326794896558 0.0062412131567268075427 1.570796326794896558" />
+            <parent link="001_base" />
+            <child link="002_mainarm" />
+            <axis xyz="0 0 1"/>
+            <limit effort="1" velocity="20" lower="-3.141592653589793116" upper="3.141592653589793116"/>
+            <joint_properties friction="0.0"/>
+        </joint>
+
+        <joint name="011_001" type="fixed">
+            <origin xyz="-1.2342557531574986421e-15 -1.8977874827186266457e-14 0.0077411809548974808148" rpy="3.141592653589793116 5.6433392980570691065e-17 -1.57079632679489678" />
+            <parent link="011_gearmast" />
+            <child link="001_base" />
+            <axis xyz="0 0 1"/>
+            <limit effort="1" velocity="20" />
+            <joint_properties friction="0.0"/>
+        </joint>
+
+        <joint name="013_011_continuous" type="continuous">
+            <origin xyz="0.04049999999999998046 0.0240000000000000005 -0.0080000000000000001665" rpy="-3.1415926535897913396 -9.7509483133368803694e-16 0.10666545435673026321" />
+            <parent link="013_lower_base" />
+            <child link="011_gearmast" />
+            <axis xyz="0 0 1"/>
+            <limit effort="1" velocity="20" lower="0" upper="0"/>
+            <joint_properties friction="0.0"/>
+        </joint>
+
+        <joint name="012_013" type="fixed">
+            <origin xyz="-0.040500000000000008216 0.02399999999999999703 0.034000000000000002442" rpy="3.141592653589793116 -0 0" />
+            <parent link="012_base" />
+            <child link="013_lower_base" />
+            <axis xyz="0 0 1"/>
+            <limit effort="1" velocity="20" />
+            <joint_properties friction="0.0"/>
+        </joint>
+
+        <link name="019_cover">
+            <visual>
+                <origin xyz="0.098000000000000003775 0 0" rpy="3.141592653589793116 -0 0" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/019_cover.stl"/>
+                </geometry>
+                <material name="019_cover_material">
+                    <color rgba="0.84313725490196078649 0.35294117647058825815 0 1.0"/>
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="0.098000000000000003775 0 0" rpy="3.141592653589793116 -0 0" />
+                <geometry>
+                    <mesh filename="package://pinchy_robot_description/models/mesh/019_cover.stl"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="0.036862321690231604487 -6.8806840621015469164e-05 -0.00085162796094545231695" rpy="0 0 0"/>
+                <mass value="0.0067192321044972072239" />
+                <inertia ixx="2.2690709427104686356e-06" ixy="-2.9046880753268993302e-09" ixz="9.7574875352722394698e-09" iyy="2.3237786902315814345e-06" iyz="-7.364359567600627741e-11" izz="4.5790381405287556413e-06" />
+            </inertial>
+        </link>
+
+        <joint name="012_019" type="fixed">
+            <origin xyz="-0.098000000000000003775 -1.0625181290357943453e-17 0.055000000000000000278" rpy="3.141592653589793116 -0 0" />
+            <parent link="012_base" />
+            <child link="019_cover" />
+            <axis xyz="0 0 1"/>
+            <limit effort="1" velocity="20" />
+            <joint_properties friction="0.0"/>
+        </joint>
+
     </xacro:macro>
-
-
 </robot>
