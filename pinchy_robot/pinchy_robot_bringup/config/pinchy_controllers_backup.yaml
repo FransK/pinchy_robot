@@ -11,9 +11,10 @@ controller_manager:
 joint_trajectory_controller:
   ros__parameters:
     joints:
-      - 013_011_continuous
-      - base_varm
-      - base_mainarm
+      - base_link_to_torso
+      - torso_to_upper_arm
+      - upper_arm_to_lower_arm
+      - lower_arm_to_hand
 
     command_interfaces:
       - position

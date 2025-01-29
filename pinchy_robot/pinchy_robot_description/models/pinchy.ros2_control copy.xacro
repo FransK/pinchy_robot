@@ -16,21 +16,28 @@
                 </xacro:unless>
             </hardware>
 
-            <joint name="013_011_continuous">
+            <joint name="base_link_to_torso">
                 <command_interface name="position">
                     <param name="min">-1</param>
                     <param name="max">1</param>
                 </command_interface>
                 <state_interface name="position"/>
             </joint>
-            <joint name="base_varm">
+            <joint name="torso_to_upper_arm">
                 <command_interface name="position">
                     <param name="min">-1</param>
                     <param name="max">1</param>
                 </command_interface>
                 <state_interface name="position"/>
             </joint>
-            <joint name="base_mainarm">
+            <joint name="upper_arm_to_lower_arm">
+                <command_interface name="position">
+                    <param name="min">-1</param>
+                    <param name="max">1</param>
+                </command_interface>
+                <state_interface name="position"/>
+            </joint>
+            <joint name="lower_arm_to_hand">
                 <command_interface name="position">
                     <param name="min">-1</param>
                     <param name="max">1</param>
